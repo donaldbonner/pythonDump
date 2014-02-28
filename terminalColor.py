@@ -1,0 +1,51 @@
+import sys
+# String at beginning of word tells terminal the color to be
+def bytes(color):
+	if color == "black":
+		return "\033[22;30mBLACK!"
+	elif color == "red":
+		return "\033[22;31mRED!"
+	elif color == "green":
+		return "\033[22;32mGREEN!"
+	elif color == "yellow":
+		return "\033[22;33mYELLOW!"
+	elif color == "gold":
+		return "\033[22;33mGOLD!"
+	elif color == "blue":
+		return "\033[22;34mBLUE!"
+	elif color == "pink":
+		return "\033[22;35mPINK!"
+	elif color == "teal":
+		return "\033[22;36mTEAL!"
+	elif color == "grey":
+		return "\033[22;37mGREY!"
+	else:
+		return None
+
+
+def options():
+    print "\033[22;30mOptions:"
+    print "\033[22;31mRED"
+    print "\033[22;32mGREEN"
+    print "\033[22;33mYELLOW"
+    print "\033[22;34mBLUE"
+    print "\033[22;35mPINK"
+    print "\033[22;33mGOLD"
+    print "\033[22;36mTEAL"
+    print "\033[22;37mGREY"
+    print "\033[22;30mBLACK"
+
+def main():
+	color = raw_input("What color should the terminal be!?")
+	color = bytes(color.lower())
+	while True:
+		if color == None:
+			options()
+			color = raw_input("What color should the terminal be!?")
+			color = bytes(color.lower())
+		else:
+			print "The terminal is now", color
+			sys.exit(0)
+
+if __name__ == "__main__":
+	main()
