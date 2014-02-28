@@ -1,0 +1,30 @@
+#!/usr/bin/env python
+import SimpleHTTPServer, SocketServer, socket, os
+"""
+This will make a quick web host server for the directory it is located
+Possibly used for helping a homie with code
+Or whatever.
+"""
+# Get local inet_ip address
+def getIP():
+    try:
+	socket.gethostbyname(socket.gethostname())
+    except socket.error as msg:
+        print "Not connected to the interwebs"
+        sys.exit(-1)
+    return socket.gethostbyname(socket.gethostname())
+
+def main():
+	PORT = 8000	
+	machineIP = getIP()
+	print 'To connect, got to web browser and type:',repr('http://'+machineIP+':8000')
+
+	# Create the object
+	Handler = SimpleHTTPServer.SimpleHTTPRequestHandler	
+
+	# Establish server connection
+	httpd = SocketServer.TCPServer(("", PORT), Handler)	
+	httpd.serve_forever()  # run forever
+
+if __name__ == '__main__':
+	main()

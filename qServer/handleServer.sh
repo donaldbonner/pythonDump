@@ -19,6 +19,6 @@ elif [[ "$1" == "uninstall" ]]; then
 		echo "quickServer not in $BINPATH"
 	fi
 else
-	echo 'type ./installServer COMMAND'
+	echo 'usage: ./installServer COMMAND'
 	echo 'Command options - install or uninstall'
 fi
