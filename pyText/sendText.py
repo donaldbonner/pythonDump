@@ -55,7 +55,7 @@ password = getpass.getpass("Password for " + username + ":")
 server.login(username, password)
 
 #Send the message
-server.sendmail(sender, textTo, message)
+server.sendmail(username, textTo, message)
 print('Message sent!')
 
 #Quit the server
