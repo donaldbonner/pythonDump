@@ -6,3 +6,5 @@ This is my dump folder of random python scripts and code snippets.  Some come fr
 Moderatly Intersting
 --------------------
 *	[quickServer](https://github.com/donaldbonner/random/tree/master/qServer) - This will host the file directory it is in to the interwebs.  Run script for details on how to access.
+
+*	[pyText](https://github.com/donaldbonner/pythonDump/tree/master/pyText) - This will send sms text to a t-mobile, at&t, and verizon phone.

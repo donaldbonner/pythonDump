@@ -24,7 +24,7 @@ if len(number) != 10:
 #Make sure valid provider
 print('What is the receiving phone provider? (at&t, verizon, or tmobile)')
 while True:
-	prov = sys.stdin.readline().strip()
+	prov = sys.stdin.readline().strip().lower()
 	if prov == ('at&t' or 'att'):
 		host = 'mms.att.net'
 		break
