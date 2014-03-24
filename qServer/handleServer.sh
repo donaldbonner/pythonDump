@@ -1,10 +1,10 @@
 #!/bin/bash
-BINPATH=/usr/local/bin
+BINPATH=/usr/bin
 
 if [[ "$1" == "install" ]]; then
 	chmod a+x ./quickServer
 
-	if [[ ! -e /usr/local/bin/quickServer ]]; then
+	if [[ ! -e /usr/bin/quickServer ]]; then
 		sudo cp quickServer $BINPATH
 		echo "copied ./quickServer to $BINPATH/quickServer"
 	else
@@ -12,8 +12,8 @@ if [[ "$1" == "install" ]]; then
 	fi
 
 elif [[ "$1" == "uninstall" ]]; then
-	if [[ -e /usr/local/bin/quickServer ]]; then
-		sudo rm /usr/local/bin/quickServer
+	if [[ -e /usr/bin/quickServer ]]; then
+		sudo rm /usr/bin/quickServer
 		echo "removed $BINPATH/quickServer"
 	else
 		echo "quickServer not in $BINPATH"

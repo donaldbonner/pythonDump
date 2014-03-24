@@ -1,10 +1,10 @@
 #!/bin/bash
-BINPATH=/usr/local/bin
+BINPATH=/usr/bin
 
 if [[ "$1" == "install" ]]; then
 	chmod a+x ./getip
 
-	if [[ ! -e /usr/local/bin/getip ]]; then
+	if [[ ! -e /usr/bin/getip ]]; then
 		sudo cp getip $BINPATH
 		echo "copied ./getip to $BINPATH/getip"
 	else
@@ -12,8 +12,8 @@ if [[ "$1" == "install" ]]; then
 	fi
 
 elif [[ "$1" == "uninstall" ]]; then
-	if [[ -e /usr/local/bin/getip ]]; then
-		sudo rm /usr/local/bin/getip
+	if [[ -e /usr/bin/getip ]]; then
+		sudo rm /usr/bin/getip
 		echo "removed $BINPATH/getip"
 	else
 		echo "getip not in $BINPATH"
