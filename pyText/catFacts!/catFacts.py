@@ -19,6 +19,7 @@ else:
 with open("factList") as f:
 	facts = [line.strip() for line in f]
 print(facts)
+
 sys.exit(0)
 
 # Prompt for phone number
