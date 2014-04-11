@@ -10,3 +10,5 @@ Moderatly Intersting
 *	[pyText](https://github.com/donaldbonner/pythonDump/tree/master/pyText) - This will send sms text to a t-mobile, at&t, and verizon phone.
 
 *	[getip](https://github.com/donaldbonner/pythonDump/tree/master/getIP) - Simple script to display ip address in terminal with command 'getip'
+
+*	[CatFacts!](https://github.com/donaldbonner/pythonDump/tree/master/pyText/catFacts!) - Get all your friends up to date with the latest CatFacts!
