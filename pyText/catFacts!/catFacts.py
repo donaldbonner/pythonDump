@@ -3,12 +3,23 @@
 # DJ Bonner
 # Script to send SMS text via gmail server using python 3
 
-import smtplib, sys, getpass
+import smtplib, sys, getpass, os
 
 # Check for python3
 if sys.hexversion < 0x030000F0:
     print("This script requires Python 3")
     sys.exit(1)
+
+if os.path.isfile('factList'):
+    print('Fact list is present!')
+else:
+    print('Fact list is not in directory')
+    sys.exit(1)
+
+with open("factList") as f:
+	facts = [line.strip() for line in f]
+print(facts)
+sys.exit(0)
 
 # Prompt for phone number
 print('What is the receiving phone number?')
@@ -60,3 +71,4 @@ print('Message sent!')
 
 # Logout the server
 server.quit()
+sys.exit(0)
