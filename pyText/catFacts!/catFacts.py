@@ -18,7 +18,9 @@ else:
 
 with open("factList") as f:
 	facts = [line.strip() for line in f]
-print(facts)
+
+for things in facts:
+	print(things)		
 
 sys.exit(0)
 
