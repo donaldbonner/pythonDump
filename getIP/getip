@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # simple script for easily displaying IP address in terminal
-import socket
+import socket, sys
 
 try:
 	socket.gethostbyname(socket.gethostname())
