@@ -2,10 +2,10 @@
 
 import sqlite3
 
-host     = '209.114.51.205'
-user     = 'development'
-passwd   = 'Fqrb4jDARGwp7Y'
-dbName   = 'vw_dev'
+host     = raw_input('host:')
+user     = raw_input('user:')
+passwd   = raw_input('passwd:')
+dbName   = raw_input('dbName:')
 output   = dbName + '.xls'
 
 print( '%s database will be saved to %s.' % ( dbName, output ) )
